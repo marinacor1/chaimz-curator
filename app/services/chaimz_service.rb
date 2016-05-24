@@ -1,11 +1,11 @@
 class ChaimzService
   def initialize #might need to pass in a user
-    @connection = Faraday.new(url: "https://my-chaimz.herokuapp.com/")
+    @connection = Faraday.new(url: "https://my-chaimz.herokuapp.com/api/v1/")
     @connection.headers["Authorization"] = "Bearer 35148ad62db32ff044d6df2cd57" #Bearer #ENV['token']
   end
 
   def get_artists
-    @connection.get "/api/v1/artists" #@connection.get "/api/v1/artists?token=#@user.token"
+    @connection.get "artists" #@connection.get "/api/v1/artists?token=#@user.token"
   end
 
 #service = ChaimzService.new
