@@ -1,4 +1,4 @@
-class Artist
+class Artist < OpenStruct
 
   attr_accessor :id, :name, :created_at, :updated_at
 
