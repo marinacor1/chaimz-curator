@@ -13,7 +13,7 @@ class ChaimzService
 #service.get_artists.body
 
   def get_artist(id)
-   @connection.get "artist/#{id}"
+   @connection.get "artists/#{id}"
   end
 
   def parse(response)
