@@ -12,12 +12,16 @@ class AlbumsService
     JSON.parse(response.body, symbolize_names: true)
   end
 
-  def get_song(album_id)
-    @connection.get "albums/album_id"
+  def get_album(album_id)
+    @connection.get "albums/#{album_id}"
   end
 
-  def album_hash
+  def albums_hash
     parse(get_albums)
+  end
+
+  def album_hash(id)
+    parse(get_album(id))
   end
 
 end
