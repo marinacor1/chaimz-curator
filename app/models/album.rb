@@ -14,4 +14,8 @@ class Album < OpenStruct
       Album.new(hash)
     end
   end
+
+  def save
+    
+  end
 end

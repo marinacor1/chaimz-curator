@@ -15,4 +15,8 @@ class Artist < OpenStruct
       Artist.new(artist_hash)
     end
   end
+
+  def save
+    Artist.service.create_artist(self.to_h)
+  end
 end

@@ -32,4 +32,13 @@ class ChaimzService
   def artist_hash(id)
     parse(get_artist(id))
   end
+
+  def post_artist
+
+  end
+
+  def create_artists(new_artist_hash)
+    create_hash = {name: new_artist_hash[:name]}
+    @connection.params create_hash
+  end
 end
